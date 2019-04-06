@@ -9,22 +9,45 @@
     <title>FORMULARIO</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-        <form class="col s12">
-        <div class="row">
-            <div class="input-field col s6">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">First Name</label>
+    <nav>
+        <div class="nav-wrapper blue lighten-1">
+            <img src="../public/img/logoEcotec.jpg" class="brand-logo circle center" height="60px" width="auto" alt="logo-ecotec">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="Views\About.html">Acerca de</a></li>
+                <li><a href="Views/Form.php">Formulario</a></li>
+                <!--<li><a href="collapsible.html">JavaScript</a></li>-->
+            </ul>
         </div>
-         <div class="input-field col s6">
-            <i class="material-icons prefix">phone</i>
-            <input id="icon_telephone" type="tel" class="validate">
-            <label for="icon_telephone">Telephone</label>
-            </div>
-        </div>
-        </form>
+    </nav>
+    <div class="container center">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s8">
+                        <i class="material-icons prefix">assignment</i>
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Nombre</label>
+                    </div>
+                    <div class="input-field col s8">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="telephone" type="tel" class="validate">
+                        <label for="telephone">Telefono</label>
+                    </div>
+                    <div class="input-field col s8">
+                        <i class="material-icons prefix" >email</i>
+                        <input id="email" class="validate" type="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s8">
+                        <i class="material-icons prefix">address</i>
+                        <input type="text" id="address" class="validate">
+                        <label for="address">Direccion</label>
+                    </div>
+                </div>
+            </form>
+            <button class="btn waves-effect waves-light col s8 blue lighten-1" type="submit" name="submit_form">Submit
+                <i class="material-icons right">send</i>
+            </button>
         </div>
     </div>
 </body>
