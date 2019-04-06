@@ -21,11 +21,11 @@
     </nav>
     <div class="container center">
         <div class="row">
-            <form class="col s12">
+            <form class="col s12" action="form-controller.php" method="POST">
                 <div class="row">
                     <div class="input-field col s8">
                         <i class="material-icons prefix">assignment</i>
-                        <input id="name" type="text" class="validate">
+                        <input id="name" type="text" class="validate" required="" aria-required="true">
                         <label for="name">Nombre</label>
                     </div>
                     <div class="input-field col s8">
@@ -35,20 +35,28 @@
                     </div>
                     <div class="input-field col s8">
                         <i class="material-icons prefix" >email</i>
-                        <input id="email" class="validate" type="email">
+                        <input id="email" class="validate" type="email" required="" aria-requried="true">
                         <label for="email">Email</label>
                     </div>
                     <div class="input-field col s8">
                         <i class="material-icons prefix">address</i>
-                        <input type="text" id="address" class="validate">
+                        <input type="text" id="address" class="validate" required="" aria-required="true">
                         <label for="address">Direccion</label>
+                    </div>
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light col s8 blue lighten-1" type="submit" name="submit_form">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
                     </div>
                 </div>
             </form>
-            <button class="btn waves-effect waves-light col s8 blue lighten-1" type="submit" name="submit_form">Submit
-                <i class="material-icons right">send</i>
-            </button>
+           
         </div>
     </div>
 </body>
+<script src="../public/vendor/js/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javaScript">
+    
+</script>
 </html>
