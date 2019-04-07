@@ -13,7 +13,7 @@
         <div class="nav-wrapper blue lighten-1">
             <img src="../public/img/logoEcotec.jpg" class="brand-logo circle center" height="60px" width="auto" alt="logo-ecotec">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="Views\About.html">Acerca de</a></li>
+                <li><a href="Views/About.html">Acerca de</a></li>
                 <li><a href="Views/Form.php">Formulario</a></li>
                 <!--<li><a href="collapsible.html">JavaScript</a></li>-->
             </ul>
@@ -21,7 +21,7 @@
     </nav>
     <div class="container center">
         <div class="row">
-            <form class="col s12" action="form-controller.php" method="POST">
+            <form class="col s12" action="../Controller/formController.php" method="POST">
                 <div class="row">
                     <div class="input-field col s8">
                         <i class="material-icons prefix">assignment</i>
@@ -57,6 +57,22 @@
 <script src="../public/vendor/js/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script type="text/javaScript">
-    
+    function sendData() {
+        $.ajax({
+            url: "../Controller/formController.php",
+            method: "POST",
+            data: {
+                sentData: "Sent",
+                name: $("#name").val(),
+                email: $("#email").val(),
+                telefono: $("#telephone").val(),
+                address: $("#address").val(),
+            },
+            success: function (respuesta) {
+                console.log(respuesta.nombre);
+                alert(respuesta.nombre);
+            }
+        });
+    }
 </script>
 </html>
